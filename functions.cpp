@@ -25,7 +25,7 @@ std::vector<Student> DataInput(std::string dataFileName, bool &error)
     std::vector<Student> students;
     if (!file.is_open())
     {
-        std::cout << "Plik zostal nieprawidlowo wczytany" << std::endl;
+        std::cout << "Plik zostal nieprawidlowo wczytany!" << std::endl;
         error = true;
         return students;
     }
@@ -54,7 +54,7 @@ Student StudentFromLine(std::string line, bool &error)
     std::size_t found = line.find(',');
     if (found == std::string::npos)
     {
-        std::cout << "1-Nieprawidlowy format pliku wejsciowego!" << std::endl;
+        std::cout << "Nieprawidlowy format pliku wejsciowego!" << std::endl;
         error = true;
         return student;
     }
@@ -65,7 +65,7 @@ Student StudentFromLine(std::string line, bool &error)
     std::size_t found2 = line.find(',', found + 1);
     if (found2 == std::string::npos)
     {
-        std::cout << "2-Nieprawidlowy format pliku wejsciowego!" << std::endl;
+        std::cout << "Nieprawidlowy format pliku wejsciowego!" << std::endl;
         error = true;
         return student;
     }
@@ -145,4 +145,5 @@ void SaveData(std::vector<Student> &students, bool &error)
             dataFile << std::setprecision(3) << average << std::endl;
         }
     }
+    std::cout<<"Dane zostaly poprawnie zapisane do pliku"<<std::endl;
 }
