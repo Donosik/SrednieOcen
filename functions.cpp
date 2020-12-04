@@ -42,6 +42,7 @@ std::vector<Student> DataInput(std::string dataFileName, bool &error)
         }
         AddStudent(students, student);
     }
+    file.close();
     return students;
 }
 
