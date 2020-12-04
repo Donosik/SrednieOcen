@@ -11,8 +11,7 @@ struct Subject
 
 struct Student
 {
-    std::string firstName;
-    std::string lastName;
+    std::string name;
     std::vector<Subject> subject;
 };
 
