@@ -146,5 +146,8 @@ void SaveData(std::vector<Student> &students, bool &error)
             dataFile << std::setprecision(3) << average << std::endl;
         }
     }
-    std::cout<<"Dane zostaly poprawnie zapisane do pliku"<<std::endl;
+    if (students.size() > 0)
+        std::cout << "Dane zostaly poprawnie zapisane do pliku" << std::endl;
+    else
+        std::cout << "Program zakonczyl prace poprawnie, lecz brak danych spodowodal, ze nie ma nic do zapisania"
 }
